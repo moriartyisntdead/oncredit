@@ -12,10 +12,8 @@ var gulp = require('gulp'),
 
 gulp.task('js:build', function () {
     gulp.src([
+        // 'js/bootstrap.min.js',
         'js/jquery-3.3.1.min.js',
-        'js/jquery.fullpage.min.js',
-        'js/jquery.easy-autocomplete.min.js',
-        'js/jquery.validate.min.js',
         'js/script.js'
     ])
     //.pipe(uglify({
@@ -28,8 +26,7 @@ gulp.task('js:build', function () {
 
 gulp.task('style:build', function () {
     gulp.src([
-        'css/jquery.fullpage.min.css',
-        'css/easy-autocomplete.min.css',
+        'css/bootstrap.min.css',
         'css/style.scss'
     ])
         .pipe(sass().on('error', sass.logError)) // Компилирует SCSS

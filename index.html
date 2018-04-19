@@ -2,9 +2,172 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
     <title>OnCredit</title>
+    <link rel="stylesheet" href="css/app.min.css">
 </head>
 <body>
+<!--header-->
+<header class="header">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a href="/" class="navbar-brand">
+                <img src="img/logo.png" alt="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="header_menu"
+                    aria-controls="header_menu" aria-expanded="false" aria-label="Toggle navigation"></button>
+            <div class="collapse navbar-collapse" id="header_menu">
+                <div class="navbar-nav mx-auto">
+                    <a href="#!" class="nav-link white">Как получить</a>
+                    <a href="#!" class="nav-link white">Как погасить</a>
+                    <a href="#!" class="nav-link white">Как продлить</a>
+                    <a href="#!" class="nav-link white">Новости</a>
+                    <a href="#!" class="nav-link white">Вопросы</a>
+                </div>
+                <div class="ml-auto">
+                    <a href="#!" class="underline white">Вход</a>
+                    <a href="#!" class="btn-border white">Регистрация</a>
+                </div>
+            </div>
+            <div class="navbar-lang">
+                <a href="#!" class="active">рус</a>
+                /
+                <a href="#!">укр</a>
+            </div>
+        </div>
+    </nav>
+</header>
 
+<!--main content-->
+<section class="banner-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg">
+                <div class="banner-block__label">СРОЧНЫЙ КРЕДИТ <br>
+                    ОНЛАЙН</div>
+            </div>
+            <div class="col-lg">
+                <div class="calculator">
+                    <div class="calculator__title">
+                        Какая сумма Вам нужна?
+                    </div>
+                    <input type="text" class="material-input" placeholder="Телефон">
+                    <input type="email" class="material-input" placeholder="E-mail">
+                    <input type="number" class="material-input" placeholder="ИНН">
+                    <input type="password" class="material-input" placeholder="Пароль">
+                    <input type="password" class="material-input" placeholder="Подтвердить пароль">
+                    <div class="calculator__terms">
+                        <input type="checkbox" id="terms">
+                        <label for="terms">
+                            Я ознакомлен(а) и принимаю <a href="#!">«Соглашение об обработке персональных
+                            данных»</a>, а также согласен(на) с <a href="#!">«Положения про конфиденциальность
+                            данных и их обработку», «Правила выдачи кредитных займов»</a>.
+                        </label>
+                    </div>
+                    <button class="btn">Получить деньги</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="text-section half-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="text-section_title">
+                    Кредит за 10 минут онлайн с OnCredit доступен для каждого!
+                </div>
+
+                <div class="text-section_subtitle">
+                    Условия кредитования
+                </div>
+                <div class="text-section_text">
+                    Минимальный срок пользования услугой - 65 дней. <br>
+                    Максимальный - исполнение Заемщиком обязательств перед компанией.
+                    693,5% - максимальный процент в год. <br>
+                    Воспользоваться услугами компании можно только на основании договора. Срок действия договора
+                    истекает по выполнению Сторонами взятых обязательств.
+                </div>
+
+                <div class="text-section_subtitle">
+                    В случаях несоблюдения обязательств Заемщик несет финансовую ответственность:
+                </div>
+                <div class="text-section_text">
+                    • Возможно открытие процесса по принудительному взысканию долга в рамках судебного порядка.
+                    <br>
+                    • Предусмотрено предоставление права требования долга к третьим лицам.
+                </div>
+
+                <div class="text-section_subtitle">
+                    С момента просрочки - начинает считаться пеня в размере 1% от «тела» просроченного кредита каждый
+                    день пользования.
+                </div>
+                <div class="text-section_text">
+                    Начисление происходит с начала просрочки. Начисление пени закрывается при условии, что Заемщик
+                    погасил заем и уплатил сумму пользования.
+                </div>
+
+                <div class="text-section_subtitle">
+                    Начисление процентной ставки за год:
+                </div>
+                <div class="text-section_text">
+                    Например, заем составляет 1000 грн. Услуга стоит 19 грн./день. Это равняется стандартной ставке -
+                    1,9%/день. А значит годовая процентная ставка (APR) составляет - 693,5%. <br>
+                    Образец начисления общей стоимости кредита: <br>
+                    Заем составляет 1000 грн. Это «тело». Срок пользования - 90 дней. Итак, 1000 грн. умножаем на 1,9% и
+                    результат умножаем на 90 дней. Получаем 2710 грн.
+                </div>
+
+                <div class="text-section_subtitle">
+                    Требования для продления действия договора займа
+                </div>
+                <div class="text-section_text">
+                    Займом можно пользоваться неограниченный срок в рамках договора. Но при условии, что осуществляется
+                    оплата процентов за пользование займом каждые 10 дней.
+                </div>
+            </div>
+            <div class="col-lg-4 offset-lg-2">
+                <div class="requisites-block">
+                    <p class="requisites-block__title">
+                        Наши реквизиты:
+                    </p>
+                    <div class="requisites-block__data text-blue">
+                        <p>ООО «ДЖЕНЕЗИС ФИНАНС»</p>
+                        <p>Код ЕГРГОУ 40125944</p>
+                        <p>Р/р 26004056118941 в ПАО КБ «ПРИВАТБАНК»</p>
+                        <p>МФО 380775 </p>
+                    </div>
+                    <a href="#!" class="requisites-block_additional-data">
+                        Дополнительная юридическая информация
+                    </a>
+                </div>
+
+                <!--footer-->
+                <footer class="footer">
+                    <div class="footer__title">
+                        Контактная информация:
+                    </div>
+                    <div class="footer__data text-blue">
+                        <p>Украина 04073, г. Киев, <br>
+                            пр. Степана Бандеры, 8</p>
+                        <p>Телефон: <a href="tel:0800212133">0 800 21 21 33</a></p>
+                        <a href="mailto:info@oncredit.com.ua">Email: info@oncredit.com.ua</a>
+                    </div>
+                    <div class="partners">
+                        <img class="partners__comodo" src="img/comodo.png" alt="comodo">
+                        <img class="partners__dss" src="img/dss.png" alt="dss">
+                        <img class="partners__visa" src="img/visa.png" alt="visa">
+                        <img class="partners__master-card" src="img/master-card.png" alt="master-card">
+                        <img class="partners__platon" src="img/platon.png" alt="platon">
+                    </div>
+                    <div class="btn">Оформить кредит онлайн</div>
+                </footer>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="js/app.min.js"></script>
 </body>
 </html>

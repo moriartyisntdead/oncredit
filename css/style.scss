@@ -1,0 +1,309 @@
+@import "fonts";
+@import "vars";
+
+.cbalink{
+  display: none;
+}
+
+/***************************************/
+/*             Общие стили             */
+/***************************************/
+
+.half-bg {
+  background: url(../img/blue-bg.png) 100% 0/44% auto repeat-y;
+}
+
+a {
+  color: $color-grey-dark;
+  text-decoration: none;
+  &:hover {
+    color: $color-grey-dark;
+  }
+  &.white {
+    color: $color-white;
+  }
+  &.underline {
+    font-size: 14px;
+    font-family: RobotoCondensed-Regular;
+    text-decoration: underline;
+    cursor: pointer;
+    outline: none;
+  }
+}
+
+p {
+  margin-bottom: 0.3rem;
+}
+
+div {
+  color: $color-grey-dark;
+}
+
+img{
+  object-fit: contain;
+}
+
+.text-blue {
+  color: $color-blue;
+  a{
+    color: $color-blue;
+  }
+}
+
+.material-input {
+  &[type="number"]::-webkit-outer-spin-button,
+  &[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  color: $color-grey-dark;
+  padding: 10px 0;
+  border: 0;
+  font-family: RobotoCondensed-Light;
+  border-bottom: 1px solid $color-grey-dark;
+  margin-bottom: 10px;
+  font-size: 18px;
+  display: block;
+  width: 100%;
+  outline: none;
+}
+
+.btn {
+  border-radius: 0;
+  display: block;
+  width: 100%;
+  background-color: $color-blue;
+  padding: 18px;
+  font-size: 18px;
+  color: $color-white;
+  font-family: RobotoCondensed-Regular;
+  border-bottom: 3px solid $color-blue-dark;
+  cursor: pointer;
+  margin: auto;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.btn-border {
+  text-decoration: none;
+  font-size: 14px;
+  font-family: RobotoCondensed-Regular;
+  min-height: 31px;
+  max-width: 96px;
+  border: 1px solid;
+  padding: 6px 10px;
+  outline: none !important;
+  cursor: pointer;
+  box-shadow: none !important;
+  &.white {
+    color: $color-white;
+    border-color: $color-white;
+  }
+}
+
+/***************************************/
+/*                Шапка                */
+/***************************************/
+
+.header {
+  //height: 95px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  .container{
+    flex-wrap: wrap;
+  }
+  .navbar {
+    flex-grow: 1;
+    padding-top: 18px;
+    padding-bottom: 0;
+  }
+  .nav-link {
+    font-family: RobotoCondensed-Italic;
+    font-size: 18px;
+  }
+  a.underline {
+    margin-right: 25px;
+  }
+  .navbar-lang {
+    color: $color-white;
+    font-family: RobotoCondensed-Italic;
+    font-size: 14px;
+    text-align: right;
+    margin-right: 26px;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    a {
+      color: $color-white;
+      &.active {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+/***************************************/
+/*             Калькулятор             */
+/***************************************/
+
+.banner-block {
+  height: 1080px;
+  background: url(../img/bg-main.png);
+  background-size: cover;
+  padding-top: 100px;
+  &:after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 100px;
+  }
+}
+
+.banner-block__label{
+  font-size: 44px;
+  font-family:RobotoCondensed-Bold;
+  color: $color-white;
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 1.1;
+  &:after{
+    content: '';
+    width: 69px;
+    height: 107px;
+    display: block;
+    position: absolute;
+    background: url(../img/arrow.png);
+    right: 18px;
+    top: 75px;
+  }
+}
+
+.calculator {
+  display: block;
+  border-radius: 9px;
+  padding: 48px 46px 68px;
+  background-color: $color-white;
+  .material-input {
+    font-size: 24px;
+  }
+  .btn {
+    font-size: 24px;
+  }
+}
+
+.calculator__title {
+  font-size: 36px;
+  color: $color-blue;
+  font-family: RobotoCondensed-Regular;
+  margin-bottom: 10px;
+}
+
+.calculator__terms {
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  margin: 20px 0;
+  color: $color-grey-dark;
+  font-family: RobotoCondensed-Light;
+  input[type="checkbox"] {
+    margin-right: 24px;
+  }
+  a {
+    color: $color-blue;
+  }
+}
+
+/***************************************/
+/*            Блок с текстом           */
+/***************************************/
+
+.text-section {
+  padding: 60px 0 100px;
+}
+
+.text-section_title {
+  font-size: 36px;
+  color: $color-title;
+  font-family: RobotoCondensed-Italic;
+  margin-bottom: 24px;
+  line-height: 1;
+}
+
+.text-section_subtitle {
+  font-size: 18px;
+  font-family: RobotoCondensed-Light;
+  color: $color-title;
+}
+
+.text-section_text {
+  font-size: 18px;
+  font-family: RobotoCondensed-Light;
+  color: $color-grey-dark;
+  margin-bottom: 15px;
+}
+
+/***************************************/
+/*         Контактная информация       */
+/***************************************/
+
+.requisites-block {
+  font-family: RobotoCondensed-Regular;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.requisites-block__data {
+}
+
+.requisites-block_additional-data {
+  text-decoration: underline;
+}
+
+/***************************************/
+/*                Футер                */
+/***************************************/
+
+.footer{
+  font-size: 18px;
+  font-family: RobotoCondensed-Regular;
+  margin-top: 60px;
+}
+
+.footer__data{
+  font-size: 18px;
+}
+
+/***************************************/
+/*               Партнеры              */
+/***************************************/
+
+.partners{
+  margin: 30px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.partners__comodo{
+  max-width: 122px;
+}
+
+.partners__dss{
+  max-width: 97px;
+}
+
+.partners__visa{
+  max-width: 86px;
+}
+
+.partners__master-card{
+  max-width: 100px;
+}
+
+.partners__platon{
+  max-width: 113px;
+}
