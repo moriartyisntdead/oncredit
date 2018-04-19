@@ -9,8 +9,12 @@
 /*             Общие стили             */
 /***************************************/
 
-.half-bg {
+.half-bg-main {
   background: url(../img/blue-bg.png) 100% 0/44% auto repeat-y;
+}
+
+.half-bg{
+  background: url(../img/blue-bg.png) 100% 0/45% auto repeat-y;
 }
 
 a {
@@ -145,10 +149,54 @@ img{
 }
 
 /***************************************/
+/*           Баннер страницы           */
+/***************************************/
+
+.banner{
+  height: 494px;
+  width: 100%;
+  background: url(../img/banner.png);
+  background-size: cover;
+/*  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;*/
+  padding-top: 186px;
+}
+
+.banner__breadcrumbs{
+  font-size: 12px;
+  margin-bottom: 20px;
+  display: block;
+  font-family: RobotoCondensed-Regular;
+}
+
+.banner__breadcrumbs-first{
+  color: $color-grey-dark;
+  &:after{
+    content: ' - ';
+    display: inherit;
+    position: static;
+  }
+}
+
+.banner__breadcrumbs-second{
+  color: $color-white;
+}
+
+.banner__title{
+  font-size: 90px;
+  text-transform: uppercase;
+  color: $color-white;
+  font-family: RobotoCondensed-Bold;
+  line-height: 1.1;
+}
+
+/***************************************/
 /*             Калькулятор             */
 /***************************************/
 
-.banner-block {
+.calculator-block {
   height: 1080px;
   background: url(../img/bg-main.png);
   background-size: cover;
@@ -221,7 +269,14 @@ img{
 /***************************************/
 
 .text-section {
-  padding: 60px 0 100px;
+  padding: 60px 0 70px;
+  &.half-bg-main {
+    padding: 72px 0 100px;
+  }
+
+  &.half-bg{
+    padding: 40px 0 70px;
+  }
 }
 
 .text-section_title {
@@ -252,7 +307,7 @@ img{
 .requisites-block {
   font-family: RobotoCondensed-Regular;
   font-size: 18px;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }
 
 .requisites-block__data {
@@ -269,7 +324,6 @@ img{
 .footer{
   font-size: 18px;
   font-family: RobotoCondensed-Regular;
-  margin-top: 60px;
 }
 
 .footer__data{
