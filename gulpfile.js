@@ -38,6 +38,9 @@ gulp.task('style:build', function () {
         .pipe(gulp.dest('css'))
 });
 
+gulp.task('watch', function(){
+    gulp.watch('css/*.scss', ['style:build']);
+});
 
 gulp.task('default', ['js:build', 'style:build'], function () {
     console.log('Success!');
