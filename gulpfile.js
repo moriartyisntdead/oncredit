@@ -12,8 +12,8 @@ var gulp = require('gulp'),
 
 gulp.task('js:build', function () {
     gulp.src([
-        // 'js/bootstrap.min.js',
         'js/jquery-3.3.1.min.js',
+        'js/bootstrap.min.js',
         'js/script.js'
     ])
     //.pipe(uglify({

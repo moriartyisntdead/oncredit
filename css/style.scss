@@ -110,6 +110,35 @@ img{
   }
 }
 
+.switch{
+  width: 51px;
+  height: 30px;
+  position: absolute;
+  top: 13px;
+  left: 0;
+  display: block;
+  background: $color-grey-dark;
+  margin-right: 20px;
+  border-radius: 81px 58px 81px 58px;
+  span{
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: $color-white;
+    border-radius: 24px 15px;
+    margin-top: 3px;
+    margin-left: 3px;
+    transition: all 0.2s ease;
+    transform: translate(1px, 0px);
+  }
+  &--active{
+    background: $color-blue;
+    span{
+      transform: translate(20px, 0px);
+    }
+  }
+}
+
 /***************************************/
 /*                Шапка                */
 /***************************************/
@@ -435,3 +464,49 @@ img{
   font-size: 14px;
   color: #9cf;
 }
+
+
+/***************************************/
+/*               Вопросы               */
+/***************************************/
+.question{
+  padding-bottom: 20px;
+  font-family: RobotoCondensed-Regular;
+}
+
+.question__title{
+  padding: 15px 0 15px 60px;
+  position: relative;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 24px;
+  color: $color-grey-dark;
+  transition: all 0.2s ease;
+
+  &--active{
+    color: $color-blue;
+  }
+}
+
+.question__answer{
+  padding: 15px 0 15px 60px;
+  font-size: 18px;
+  line-height: 1.25;
+  color: $color-grey-dark;
+}
+
+.answer-list{
+  margin: 0;
+  padding: 0;
+}
+
+.answer-list__item{
+  list-style-type: none;
+  &:before{
+    content: "-";
+    padding-right: 5px;
+  }
+}
+
+
+
