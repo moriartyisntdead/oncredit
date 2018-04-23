@@ -13,6 +13,8 @@ var gulp = require('gulp'),
 gulp.task('js:build', function () {
     gulp.src([
         'js/jquery-3.3.1.min.js',
+        'js/jquery-ui.min.js',
+        'js/jquery.ui.touch-punch.min.js',
         'js/bootstrap.min.js',
         'js/script.js'
     ])
@@ -27,6 +29,7 @@ gulp.task('js:build', function () {
 gulp.task('style:build', function () {
     gulp.src([
         'css/bootstrap.min.css',
+        'css/jquery-ui.min.css',
         'css/style.scss'
     ])
         .pipe(sass().on('error', sass.logError)) // Компилирует SCSS

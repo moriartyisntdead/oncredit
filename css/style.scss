@@ -1,7 +1,7 @@
 @import "fonts";
 @import "vars";
 
-.cbalink{
+.cbalink {
   display: none;
 }
 
@@ -13,7 +13,7 @@
   background: url(../img/blue-bg.png) 100% 0/44% auto repeat-y;
 }
 
-.half-bg{
+.half-bg {
   background: url(../img/blue-bg.png) 100% 0/45% auto repeat-y;
 }
 
@@ -33,6 +33,11 @@ a {
     cursor: pointer;
     outline: none;
   }
+  &.forgot-password {
+    color: $color-blue;
+    font-size: 14px;
+    outline: none;
+  }
 }
 
 p {
@@ -43,13 +48,13 @@ div {
   color: $color-grey-dark;
 }
 
-img{
+img {
   object-fit: contain;
 }
 
 .text-blue {
   color: $color-blue;
-  a{
+  a {
     color: $color-blue;
   }
 }
@@ -104,13 +109,71 @@ img{
     color: $color-white;
     border-color: $color-white;
   }
-  &.blue{
+  &.blue {
     color: $color-blue;
     border-color: $color-blue;
   }
+  &:hover {
+    text-decoration: none;
+  }
 }
 
-.switch{
+.slider {
+  &.ui-widget-content {
+    height: 10px;
+    border-radius: 4px;
+    background: $color-grey-light;
+    border: 0;
+    margin-bottom: 25px;
+  }
+  .ui-slider-range {
+    border-radius: 4px;
+    background: linear-gradient(to right, #336699, #33c0f3);
+  }
+  .ui-slider-handle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: $color-grey-light;
+    border: 5px solid $color-white;
+    outline: none;
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: -10px;
+    cursor: pointer;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+/***************************************/
+/*                Формы                */
+/***************************************/
+
+.form__label {
+  font-size: 18px;
+  font-family: RobotoCondensed-Regular;
+  color: $color-title;
+}
+
+.form__input {
+  border: 1px solid $color-grey-dark;
+  border-radius: 4px;
+  width: 100%;
+  outline: none;
+  font-size: 22px;
+  color: $color-title;
+  padding: 0 12px;
+}
+
+.switch {
   width: 51px;
   height: 30px;
   position: absolute;
@@ -120,7 +183,7 @@ img{
   background: $color-grey-dark;
   margin-right: 20px;
   border-radius: 81px 58px 81px 58px;
-  span{
+  span {
     display: block;
     width: 24px;
     height: 24px;
@@ -131,9 +194,9 @@ img{
     transition: all 0.2s ease;
     transform: translate(1px, 0px);
   }
-  &--active{
+  &--active {
     background: $color-blue;
-    span{
+    span {
       transform: translate(20px, 0px);
     }
   }
@@ -149,7 +212,7 @@ img{
   top: 0;
   left: 0;
   right: 0;
-  .container{
+  .container {
     flex-wrap: wrap;
   }
   .navbar {
@@ -186,44 +249,45 @@ img{
 /*           Баннер страницы           */
 /***************************************/
 
-.banner{
+.banner {
   height: 494px;
   width: 100%;
   background: url(../img/banner.png);
   background-size: cover;
-/*  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;*/
+  /*  display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;*/
   padding-top: 186px;
 }
 
-.banner__breadcrumbs{
+.banner__breadcrumbs {
   font-size: 12px;
   margin-bottom: 20px;
   display: block;
   font-family: RobotoCondensed-Regular;
 }
 
-.banner__breadcrumbs-first{
+.banner__breadcrumbs-first {
   color: $color-grey-dark;
-  &:after{
+  &:after {
     content: ' - ';
     display: inherit;
     position: static;
   }
 }
 
-.banner__breadcrumbs-second{
+.banner__breadcrumbs-second {
   color: $color-white;
 }
 
-.banner__title{
+.banner__title {
   font-size: 90px;
   text-transform: uppercase;
   color: $color-white;
   font-family: RobotoCondensed-Bold;
   line-height: 1.1;
+  max-width: 666px;
 }
 
 /***************************************/
@@ -235,7 +299,7 @@ img{
   background: url(../img/bg-main.png);
   background-size: cover;
   padding-top: 100px;
-  &:after{
+  &:after {
     content: '';
     display: block;
     position: absolute;
@@ -243,15 +307,15 @@ img{
   }
 }
 
-.banner-block__label{
+.calculator-block__title {
   font-size: 44px;
-  font-family:RobotoCondensed-Bold;
+  font-family: RobotoCondensed-Bold;
   color: $color-white;
   position: absolute;
   right: 0;
   top: 0;
   line-height: 1.1;
-  &:after{
+  &:after {
     content: '';
     width: 69px;
     height: 107px;
@@ -261,6 +325,23 @@ img{
     right: 18px;
     top: 75px;
   }
+}
+
+.slider__labels {
+  font-size: 24px;
+  font-family: RobotoCondensed-Regular;
+  margin-bottom: 7px;
+  .side-slider & {
+
+  }
+}
+
+.slider__value {
+  display: inline-block;
+}
+
+.slider__currency {
+  float: right;
 }
 
 .calculator {
@@ -280,10 +361,10 @@ img{
   font-size: 36px;
   color: $color-blue;
   font-family: RobotoCondensed-Regular;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
-.calculator__terms {
+.terms {
   display: flex;
   flex-direction: row;
   font-size: 14px;
@@ -308,8 +389,8 @@ img{
     padding: 72px 0 100px;
   }
 
-  &.half-bg{
-    padding: 40px 0 70px;
+  &.half-bg {
+    padding: 35px 0 65px;
   }
 }
 
@@ -352,15 +433,35 @@ img{
 }
 
 /***************************************/
+/*           Боковой слайдер           */
+/***************************************/
+
+.side-slider {
+  margin-bottom: 166px;
+}
+
+.side-slider__title {
+  color: $color-grey-dark;
+  font-family: RobotoCondensed-Light;
+  font-size: 36px;
+  margin-bottom: 28px;
+  line-height: 1;
+}
+
+.side-slider__btn {
+  margin-top: 52px;
+}
+
+/***************************************/
 /*                Футер                */
 /***************************************/
 
-.footer{
+.footer {
   font-size: 18px;
   font-family: RobotoCondensed-Regular;
 }
 
-.footer__data{
+.footer__data {
   font-size: 18px;
 }
 
@@ -368,7 +469,7 @@ img{
 /*               Партнеры              */
 /***************************************/
 
-.partners{
+.partners {
   margin: 30px 0;
   display: flex;
   flex-direction: row;
@@ -376,48 +477,49 @@ img{
   justify-content: space-around;
 }
 
-.partners__comodo{
+.partners__comodo {
   max-width: 122px;
 }
 
-.partners__dss{
+.partners__dss {
   max-width: 97px;
 }
 
-.partners__visa{
+.partners__visa {
   max-width: 86px;
 }
 
-.partners__master-card{
+.partners__master-card {
   max-width: 100px;
 }
 
-.partners__platon{
+.partners__platon {
   max-width: 113px;
 }
-
 
 /***************************************/
 /*               Новости               */
 /***************************************/
-.article{
+.article {
   padding-bottom: 20px;
 }
-.article_new-line{
+
+.article_new-line {
   padding-top: 78px;
   @media (max-width: 576px) {
     padding-top: 0;
   }
 }
-.article__miniature{
+
+.article__miniature {
   position: relative;
   padding-left: 10px;
   z-index: 1;
-  img{
+  img {
     width: 100%;
   }
 
-  &:after{
+  &:after {
     content: "";
     width: 94%;
     height: 70%;
@@ -428,7 +530,8 @@ img{
     left: 0;
   }
 }
-.article__title{
+
+.article__title {
   min-height: 84px;
   font-size: 18px;
   color: $color-blue;
@@ -436,16 +539,17 @@ img{
   line-height: 1;
   padding-top: 20px;
   padding-bottom: 10px;
-    @media (max-width: 576px) {
-      min-height: auto;
+  @media (max-width: 576px) {
+    min-height: auto;
   }
 }
-.article__annotation{
+
+.article__annotation {
   font-size: 14px;
   line-height: 1;
   font-family: RobotoCondensed-Light;
   color: $color-grey-dark;
-  @media (max-width: 768px){
+  @media (max-width: 768px) {
     min-height: 56px;
   }
   @media (max-width: 576px) {
@@ -453,28 +557,28 @@ img{
   }
 }
 
-.article__nav{
+.article__nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 15px;
   padding-bottom: 14px;
 }
-.article__date{
+
+.article__date {
   font-size: 14px;
   color: #9cf;
 }
 
-
 /***************************************/
 /*               Вопросы               */
 /***************************************/
-.question{
+.question {
   padding-bottom: 20px;
   font-family: RobotoCondensed-Regular;
 }
 
-.question__title{
+.question__title {
   padding: 15px 0 15px 60px;
   position: relative;
   cursor: pointer;
@@ -483,30 +587,106 @@ img{
   color: $color-grey-dark;
   transition: all 0.2s ease;
 
-  &--active{
+  &--active {
     color: $color-blue;
   }
 }
 
-.question__answer{
+.question__answer {
   padding: 15px 0 15px 60px;
   font-size: 18px;
   line-height: 1.25;
   color: $color-grey-dark;
 }
 
-.answer-list{
+.answer-list {
   margin: 0;
   padding: 0;
 }
 
-.answer-list__item{
+.answer-list__item {
   list-style-type: none;
-  &:before{
+  &:before {
     content: "-";
     padding-right: 5px;
   }
 }
 
+/***************************************/
+/*             Форма логина            */
+/***************************************/
 
+.login-form {
+  .forgot-password {
+    float: right;
+  }
+  .btn {
+    margin-top: 50px;
+  }
+}
 
+/***************************************/
+/*             Регистрация             */
+/***************************************/
+
+.registration-steps {
+  color: $color-white;
+  font-size: 18px;
+  font-family: RobotoCondensed-Bold;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: -138px;
+  .registration-step {
+    margin-right: 58px;
+    color: $color-white;
+    padding-left: 50px;
+    padding-top: 6px;
+    height: 40px;
+  }
+  .registration-step:nth-of-type(1) {
+    background: url(../img/info.png) no-repeat;
+  }
+  .registration-step:nth-of-type(2) {
+    background: url(../img/approve.png) no-repeat;
+  }
+  .registration-step:nth-of-type(3) {
+    background: url(../img/card.png) no-repeat;
+  }
+}
+
+.tabs {
+  font-size: 14px;
+  font-family: RobotoCondensed-Light;
+  list-style-type: none;
+  color: $color-grey-dark;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tab {
+  padding: 0;
+  display: inline-block;
+  position: relative;
+  &:after {
+    content: '';
+    width: 50px;
+    height: 1px;
+    display: block;
+    position: absolute;
+    background-color: $color-grey-dark;
+    top: 25px;
+    left: calc(50% - 50px / 2);
+  }
+  &.active {
+    color: $color-blue;
+    &:after {
+      background-color: $color-blue;
+    }
+  }
+}
+
+.registration__temrs {
+
+}
