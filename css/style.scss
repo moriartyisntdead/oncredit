@@ -20,11 +20,19 @@
 a {
   color: $color-grey-dark;
   text-decoration: none;
+  transition: all 0.5s;
   &:hover {
     color: $color-grey-dark;
+    text-decoration: none;
   }
   &.white {
     color: $color-white;
+    &:hover {
+      color: $color-blue-dark-hover;
+    }
+    &:active {
+      color: $color-white;
+    }
   }
   &.underline {
     font-size: 14px;
@@ -91,6 +99,36 @@ img {
   margin: auto;
   box-shadow: none !important;
   outline: none !important;
+  overflow: hidden;
+  position: relative;
+
+  &:after {
+    content: "";
+    left: -100%;
+    opacity: 52;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 120%;
+
+    background: linear-gradient(
+                    138deg,
+                    rgba(255, 255, 255, 0) 0%,
+                    rgba(255, 255, 255, 0) 25%,
+                    rgba(188, 201, 214, 0.5) 50%,
+                    rgba(188, 201, 214, 0) 75%,
+                    rgba(255, 255, 255, 0) 100%);
+  }
+  &:hover:after {
+    left: 150%;
+    opacity: 1;
+    transition-duration: 0.9s;
+    transition-property: all;
+    transition-timing-function: ease;
+  }
+  &:active {
+    color: $color-blue-light;
+  }
 }
 
 .btn-border {
@@ -105,13 +143,34 @@ img {
   cursor: pointer;
   box-shadow: none !important;
   text-align: center;
+  transition: all 0.25s;
+
   &.white {
     color: $color-white;
     border-color: $color-white;
+    background-color: transparent;
+    &:hover {
+      color: $color-blue-dark-hover;
+      background-color: $color-white;
+    }
+    &:active {
+      color: $color-white-hover;
+    }
+
   }
   &.blue {
     color: $color-blue;
     border-color: $color-blue;
+    background-color: transparent;
+    &:hover {
+      color: $color-white;
+      border-color: $color-blue-dark-hover;
+      background-color: $color-blue-dark-hover;
+    }
+    &:active {
+      color: $color-blue-light;
+    }
+
   }
   &:hover {
     text-decoration: none;
@@ -152,6 +211,62 @@ input::-webkit-inner-spin-button {
 input[type='number'] {
   -moz-appearance: textfield;
 }
+
+//checkbox start
+.checkbox-styled {
+  display: block;
+  position: relative;
+  padding-left: 45px;
+  cursor: pointer;
+}
+
+.checkbox-styled input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.checkbox-styled__indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background: $color-white;
+  border: 1px solid $color-grey-dark;
+}
+
+.checkbox-styled:hover input ~ .checkbox-styled__indicator,
+.checkbox-styled input:focus ~ .checkbox-styled__indicator {
+  background: $color-grey-light;
+}
+
+.checkbox-styled input:checked ~ .checkbox-styled__indicator {
+  border-color: $color-blue-dark-hover;
+  background-color: $color-white;
+}
+
+.checkbox-styled__indicator:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.checkbox-styled input:checked ~ .checkbox-styled__indicator:after {
+  display: block;
+}
+
+.checkbox-styled .checkbox-styled__indicator:after {
+  left: 4px;
+  top: 1px;
+  width: 5px;
+  height: 9px;
+  border: solid $color-blue-dark-hover;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+//checkbox end
 
 /***************************************/
 /*                Формы                */
@@ -221,8 +336,17 @@ input[type='number'] {
     padding-bottom: 0;
   }
   .nav-link {
-    font-family: RobotoCondensed-Italic;
+    font-family: RobotoCondensed-BoldItalic;
     font-size: 18px;
+    padding: 0;
+    transition: all 0.25s;
+    &:hover {
+      background-color: $color-white;
+      color: $color-blue-dark-hover;
+    }
+    &:active {
+      color: $color-white-hover;
+    }
   }
   a.underline {
     margin-right: 25px;
@@ -376,6 +500,9 @@ input[type='number'] {
   }
   a {
     color: $color-blue;
+    &:hover {
+      color: $color-blue-light;
+    }
   }
 }
 
@@ -430,6 +557,11 @@ input[type='number'] {
 
 .requisites-block_additional-data {
   text-decoration: underline;
+  &:hover,
+  &:focus {
+    color: $color-blue-dark-hover;
+    text-decoration: underline;
+  }
 }
 
 /***************************************/
@@ -690,3 +822,11 @@ input[type='number'] {
 .registration__temrs {
 
 }
+
+
+
+
+
+
+
+
