@@ -19,8 +19,8 @@
 
 a {
   color: $color-grey-dark;
+  transition: all 0.5s ease;
   text-decoration: none;
-  transition: all 0.5s;
   &:hover {
     color: $color-grey-dark;
     text-decoration: none;
@@ -45,6 +45,9 @@ a {
     color: $color-blue;
     font-size: 14px;
     outline: none;
+  }
+  &.btn:hover{
+    color: $color-white;
   }
 }
 
@@ -101,7 +104,6 @@ img {
   outline: none !important;
   overflow: hidden;
   position: relative;
-
   &:after {
     content: "";
     left: -100%;
@@ -122,9 +124,10 @@ img {
   &:hover:after {
     left: 150%;
     opacity: 1;
-    transition-duration: 0.9s;
-    transition-property: all;
-    transition-timing-function: ease;
+    transition: all 0.9s ease;
+    /*    transition-duration: 0.9s;
+        transition-property: all;
+        transition-timing-function: ease;*/
   }
   &:active {
     color: $color-blue-light;
@@ -327,6 +330,10 @@ input[type='number'] {
   top: 0;
   left: 0;
   right: 0;
+  .navbar-brand img {
+    width: 164px;
+    height: 27px;
+  }
   .container {
     flex-wrap: wrap;
   }
@@ -558,7 +565,7 @@ input[type='number'] {
 .requisites-block_additional-data {
   text-decoration: underline;
   &:hover,
-  &:focus {
+  &:active {
     color: $color-blue-dark-hover;
     text-decoration: underline;
   }
