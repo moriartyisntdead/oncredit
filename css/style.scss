@@ -343,7 +343,7 @@ input[type='number'] {
     padding-bottom: 0;
   }
   .nav-link {
-    font-family: RobotoCondensed-BoldItalic;
+    font-family: RobotoCondensed-Italic;
     font-size: 18px;
     padding: 0;
     transition: all 0.25s;
@@ -366,7 +366,7 @@ input[type='number'] {
     margin-right: 26px;
     flex-direction: row;
     justify-content: flex-end;
-    width: 100%;
+    //width: 100%;
     a {
       color: $color-white;
       &.active {
