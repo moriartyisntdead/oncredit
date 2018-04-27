@@ -46,7 +46,7 @@ a {
     font-size: 14px;
     outline: none;
   }
-  &.btn:hover{
+  &.btn:hover {
     color: $color-white;
   }
 }
@@ -271,6 +271,61 @@ input[type='number'] {
 
 //checkbox end
 
+.info-block__title {
+  font-family: RobotoCondensed-Light;
+  font-size: 30px;
+  line-height: 38px;
+  color: $color-title;
+  text-transform: uppercase;
+}
+
+.info-block__description {
+  font-family: RobotoCondensed-Regular;
+  font-size: 18px;
+  line-height: 22px;
+  color: $color-info-description;
+}
+
+.info-item {
+  font-family: RobotoCondensed-Regular;
+  display: flex;
+  align-items: center;
+}
+
+.info-item__text {
+  padding-left: 49px;
+  padding-right: 30px;
+}
+
+.info-item__img {
+  width: 100px;
+  img {
+    width: 100px;
+  }
+}
+
+.info-title {
+  font-size: 24px;
+  line-height: 30px;
+  color: $color-info-title;
+  text-transform: uppercase;
+}
+
+.info-title--limit-width {
+  width: 280px;
+}
+
+.info-description {
+  font-size: 18px;
+  line-height: 22px;
+  color: $color-info-description;
+  padding-top: 15px;
+}
+
+.info-highlight {
+  color: $color-info-title;
+}
+
 /***************************************/
 /*                Формы                */
 /***************************************/
@@ -418,7 +473,8 @@ input[type='number'] {
   color: $color-white;
   font-family: RobotoCondensed-Bold;
   line-height: 1.1;
-  max-width: 666px;
+  //max-width: 666px;
+  max-width: 820px;
 }
 
 /***************************************/
@@ -830,10 +886,54 @@ input[type='number'] {
 
 }
 
+/***************************************/
+/*             Как погасить            */
+/***************************************/
 
+.info-block__title--take-page {
+  margin-bottom: 60px;
+}
 
+.info-item--take-page {
+  margin-bottom: 50px;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
 
+/***************************************/
+/*             Как продлить            */
+/***************************************/
+.info-item--prolong-page {
+  margin-bottom: 70px;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
 
+.info-block__description--prolong-page {
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
 
+/***************************************/
+/*             Как погасить            */
+/***************************************/
+.info-block__title--payback-page {
+  padding-bottom: 50px;
+}
 
+.info-item--payback-page {
+  margin-bottom: 70px;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
 
+.internet-bank {
+  padding-left: 10px;
+  padding-right: 10px;
+  img {
+    width: 80px;
+  }
+}
