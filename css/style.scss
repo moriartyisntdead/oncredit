@@ -283,7 +283,8 @@ input[type='number'] {
   font-family: RobotoCondensed-Regular;
   font-size: 18px;
   line-height: 22px;
-  color: $color-info-description;
+  //color: $color-info-description;
+  color: $color-grey-dark;
 }
 
 .info-item {
@@ -295,6 +296,10 @@ input[type='number'] {
 .info-item__text {
   padding-left: 49px;
   padding-right: 30px;
+  @media (max-width: 576px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .info-item__img {
@@ -307,7 +312,8 @@ input[type='number'] {
 .info-title {
   font-size: 24px;
   line-height: 30px;
-  color: $color-info-title;
+  //color: $color-info-title;
+  color: $color-blue;
   text-transform: uppercase;
 }
 
@@ -318,12 +324,14 @@ input[type='number'] {
 .info-description {
   font-size: 18px;
   line-height: 22px;
-  color: $color-info-description;
+  //color: $color-info-description;
+  color: $color-grey-dark;
   padding-top: 15px;
 }
 
 .info-highlight {
-  color: $color-info-title;
+  //color: $color-info-title;
+  color: $color-blue;
 }
 
 /***************************************/
@@ -429,6 +437,10 @@ input[type='number'] {
       }
     }
   }
+}
+
+.btn-enter {
+  width: 95px;
 }
 
 /***************************************/
@@ -567,6 +579,18 @@ input[type='number'] {
       color: $color-blue-light;
     }
   }
+}
+
+.slider__text {
+  font-family: RobotoCondensed-Light;
+  font-size: 18px;
+  color: $color-grey-dark;
+}
+
+.slider__calc {
+  font-family: RobotoCondensed-Regular;
+  font-size: 24px;
+  color: $color-blue;
 }
 
 /***************************************/

@@ -23,7 +23,12 @@ $(function () {
             value: 3000,
             slide: function (event, ui) {
                 $('#side-slider__money-value').html(ui.value);
+            },
+            change: function (event, ui) {
+                amountReturnedCalc();
             }
+
+
         });
 
         /*   Боковой слайдер срока   */
@@ -34,8 +39,14 @@ $(function () {
             min: 1,
             step: 1,
             value: 15,
+            create: function (event, ui) {
+                amountReturnedCalc();
+            },
             slide: function (event, ui) {
                 $('#side-slider__term-value').html(ui.value);
+            },
+            change: function (event, ui) {
+                amountReturnedCalc();
             }
         });
     }
@@ -48,4 +59,15 @@ $(function () {
         $(this).parent().siblings().children('.question__title').children('.switch').removeClass('switch--active');
 
     });
+
+    function amountReturnedCalc() {
+        var getSum = $('#side-slider__money').slider("value");
+        var getDays = $('#side-slider__term').slider("value");
+        var interest = 1.9;
+        var percentDay = parseFloat(interest) / 100;
+        var returnSum = getSum + (getSum * percentDay * getDays);
+        var returnDate = moment().add(getDays, 'days').format('DD.MM.YYYY');
+        $('#side-slider__sum').html(returnSum + ' грн');
+        $('#side-slider__return-date').html(returnDate);
+    }
 });
