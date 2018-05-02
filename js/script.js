@@ -1,4 +1,6 @@
 $(function () {
+
+
     if (typeof ($.fn.slider) !== 'undefined') {
         /*   Слайдер на главной   */
         $("#calculator__slider").slider({

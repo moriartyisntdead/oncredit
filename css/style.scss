@@ -396,6 +396,10 @@ input[type='number'] {
   .navbar-brand img {
     width: 164px;
     height: 27px;
+    @media (max-width: 576px) {
+      width: 125px;
+      height: auto;
+    }
   }
   .container {
     flex-wrap: wrap;
@@ -404,6 +408,9 @@ input[type='number'] {
     flex-grow: 1;
     padding-top: 18px;
     padding-bottom: 0;
+    @media(max-width: 991px) {
+      padding-top: 35px;
+    }
   }
   .nav-link {
     font-family: RobotoCondensed-Italic;
@@ -417,9 +424,28 @@ input[type='number'] {
     &:active {
       color: $color-white-hover;
     }
+    @media (max-width: 991px) {
+      padding-top: 8px;
+      padding-bottom: 8px;
+      &:hover {
+        background-color: transparent;
+      }
+    }
   }
   a.underline {
     margin-right: 25px;
+  }
+  .navbar-side {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    @media (max-width: 991px) {
+      float: right;
+    }
+    @media (max-width: 576px) {
+      float: none;
+      justify-content: center;
+    }
   }
   .navbar-lang {
     color: $color-white;
@@ -430,17 +456,96 @@ input[type='number'] {
     flex-direction: row;
     justify-content: flex-end;
     //width: 100%;
+    @media (max-width: 576px) {
+      margin-right: 8px;
+    }
     a {
       color: $color-white;
       &.active {
         text-decoration: underline;
       }
     }
+    @media (max-width: 991px) {
+      display: none;
+    }
   }
 }
 
 .btn-enter {
   width: 95px;
+}
+
+.navbar-toggler {
+  padding-right: 0;
+  &:focus {
+    outline: none;
+  }
+}
+
+.navbar-mobile {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-mobile__lang {
+  display: none;
+  @media (max-width: 991px) {
+    display: block !important;
+
+  }
+}
+
+.icon-bar {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: $color-white;
+  transition: all .5s ease-in-out;
+  transform: rotate(0deg);
+  margin-top: 7px;
+  position: relative;
+  &:first-of-type {
+    padding-top: 0;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar-nav {
+    text-align: right;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-nav {
+    text-align: center;
+  }
+}
+
+.line {
+  display: none;
+  @media (max-width: 991px) {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: $color-white;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(1) {
+  top: 10px;
+  transform: rotate(45deg);
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(3) {
+  top: -10px;
+  transform: rotate(-45deg);
 }
 
 /***************************************/
@@ -545,6 +650,7 @@ input[type='number'] {
 
 .calculator {
   display: block;
+  //display: none;
   border-radius: 9px;
   padding: 48px 46px 68px;
   background-color: $color-white;
