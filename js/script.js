@@ -78,7 +78,7 @@ $(function () {
         $('body').toggleClass('opened');
     })
 
-
+    jQuery('#tel').mask('380000000000');
     jQuery('#inn').mask('0000000000');
     $('#calculator').validate({
         rules: {
@@ -96,6 +96,10 @@ $(function () {
                 required: true,
                 minlength: 6
             },
+            password_confirm: {
+                required: true,
+                equalTo: "#password"
+            },
 
             inn: {
                 required: true,
@@ -108,7 +112,10 @@ $(function () {
         messages: {
             tel: "Введите номер телефона",
             email: "Введите правильный email адрес",
-
+            password: "Пароль должен содержать не мене 6 символов",
+            password_confirm: "Пароли должны совпадать",
+            inn: "Введите корректный ИНН",
+            terms: "Нужно согласиться с условиями"
         },
         errorElement: 'div',
         errorLabelContainer: '.errorTxt',
@@ -121,34 +128,43 @@ $(function () {
             }
         },
         submitHandler: function (form) {
-            $.ajax({
-                url: "/test.php",
-                type: "POST",
-                data: {
-                    fName: $('#fName').val(),
-                    email: $('#email').val(),
-                    tel: $('#tel').val(),
-                    submit: 1
-                },
-                success: function (data) {
-                    swal({
-                        text: 'Спасибо! Мы уже обрабатываем Вашу заявку и в ближайшее время свяжемся с Вами.',
-                        type: 'success',
-                        confirmButtonText: 'Отлично'
-                    });
-                    $('#fName').val('');
-                    $('#email').val('');
-                    $('#tel').val('');
-                },
-                error: function (data) {
-                    swal({
-                        text: 'Произошла ошибка!',
-                        type: 'error',
-                        confirmButtonText: 'Повторить'
-                    })
-                }
-            });
+            window.location = 'https://google.com';
         }
+
+    });
+
+    jQuery('#login_phone').mask('380000000000');
+    $('#login-form').validate({
+        rules: {
+            login_phone: {
+                required: true,
+                minlength: 12,
+                maxlength: 12,
+                digits: true
+            },
+            login_password: {
+                required: true,
+                minlength: 6
+            }
+        },
+        messages: {
+            login_phone: "Введите номер телефона",
+            login_password: "Пароль должен содержать не мене 6 символов",
+        },
+        errorElement: 'div',
+        errorLabelContainer: '.errorTxt',
+        errorPlacement: function (error, element) {
+            var placement = $(element).data('error');
+            if (placement) {
+                $(placement).append(error)
+            } else {
+                error.insertAfter(element);
+            }
+        },
+        submitHandler: function (form) {
+            window.location = 'https://google.com';
+        }
+
     });
 
 
