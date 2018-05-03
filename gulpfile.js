@@ -17,6 +17,8 @@ gulp.task('js:build', function () {
         'js/jquery.ui.touch-punch.min.js',
         'js/bootstrap.min.js',
         'js/moment.min.js',
+        'js/jquery.mask.min.js',
+        'js/jquery.validate.js',
         'js/script.js'
     ])
     //.pipe(uglify({

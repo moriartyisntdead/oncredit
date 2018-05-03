@@ -72,4 +72,84 @@ $(function () {
         $('#side-slider__sum').html(returnSum + ' грн');
         $('#side-slider__return-date').html(returnDate);
     }
+
+    $('.navbar-toggler').click(function () {
+        $('.navbar').toggleClass('opened');
+        $('body').toggleClass('opened');
+    })
+
+
+    jQuery('#inn').mask('0000000000');
+    $('#calculator').validate({
+        rules: {
+            tel: {
+                required: true,
+                minlength: 12,
+                maxlength: 12,
+                digits: true
+            },
+            email: {
+                required: true,
+                email: true
+            },
+            password: {
+                required: true,
+                minlength: 6
+            },
+
+            inn: {
+                required: true,
+                minlength: 10,
+                maxlength: 10,
+                digits: true
+            },
+            terms: "required"
+        },
+        messages: {
+            tel: "Введите номер телефона",
+            email: "Введите правильный email адрес",
+
+        },
+        errorElement: 'div',
+        errorLabelContainer: '.errorTxt',
+        errorPlacement: function (error, element) {
+            var placement = $(element).data('error');
+            if (placement) {
+                $(placement).append(error)
+            } else {
+                error.insertAfter(element);
+            }
+        },
+        submitHandler: function (form) {
+            $.ajax({
+                url: "/test.php",
+                type: "POST",
+                data: {
+                    fName: $('#fName').val(),
+                    email: $('#email').val(),
+                    tel: $('#tel').val(),
+                    submit: 1
+                },
+                success: function (data) {
+                    swal({
+                        text: 'Спасибо! Мы уже обрабатываем Вашу заявку и в ближайшее время свяжемся с Вами.',
+                        type: 'success',
+                        confirmButtonText: 'Отлично'
+                    });
+                    $('#fName').val('');
+                    $('#email').val('');
+                    $('#tel').val('');
+                },
+                error: function (data) {
+                    swal({
+                        text: 'Произошла ошибка!',
+                        type: 'error',
+                        confirmButtonText: 'Повторить'
+                    })
+                }
+            });
+        }
+    });
+
+
 });

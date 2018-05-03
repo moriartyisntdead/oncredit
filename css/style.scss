@@ -8,6 +8,11 @@
 /***************************************/
 /*             Общие стили             */
 /***************************************/
+body {
+  &.opened {
+    overflow-y: hidden;
+  }
+}
 
 .half-bg-main {
   background: url(../img/blue-bg.png) 100% 0/44% auto repeat-y;
@@ -408,8 +413,23 @@ input[type='number'] {
     flex-grow: 1;
     padding-top: 18px;
     padding-bottom: 0;
+    &.opened {
+      @media (max-width: 576px) {
+        background: url(../img/bg-main.png) 50% 0%;
+        position: fixed;
+        height: 100vh;
+        overflow-y: auto;
+      }
+    }
     @media(max-width: 991px) {
       padding-top: 35px;
+    }
+    @media (max-width: 576px) {
+      align-items: flex-start;
+      left: 0;
+      right: 0;
+      z-index: 9;
+      padding-bottom: 10px;
     }
   }
   .nav-link {
@@ -476,7 +496,7 @@ input[type='number'] {
 }
 
 .navbar-toggler {
-  padding-right: 0;
+  padding: 7px 0;
   &:focus {
     outline: none;
   }
@@ -491,7 +511,6 @@ input[type='number'] {
   display: none;
   @media (max-width: 991px) {
     display: block !important;
-
   }
 }
 
@@ -510,14 +529,11 @@ input[type='number'] {
   }
 }
 
-@media (max-width: 991px) {
-  .navbar-nav {
+.navbar-nav {
+  @media (max-width: 991px) {
     text-align: right;
   }
-}
-
-@media (max-width: 576px) {
-  .navbar-nav {
+  @media (max-width: 576px) {
     text-align: center;
   }
 }
@@ -1065,5 +1081,33 @@ input[type='number'] {
   padding-right: 10px;
   img {
     width: 80px;
+  }
+}
+
+/***************************************/
+/*         Ошибки валидации            */
+/***************************************/
+.error {
+  color: #ff2424;
+}
+
+.white-input.error {
+  border-color: #a96767;
+}
+
+#error-email,
+#error-name,
+#error-tel {
+  width: 100%;
+  height: 20px;
+  text-align: center;
+  line-height: 16px;
+  font-size: 16px;
+  margin-bottom: 10px;
+
+  @media (max-width: 991px) {
+    margin-bottom: 5px;
+    font-size: 14px;
+    line-height: 14px;
   }
 }

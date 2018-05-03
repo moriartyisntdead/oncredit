@@ -67,7 +67,7 @@
                 </div>
             </div>
             <div class="col-lg">
-                <div class="calculator">
+                <form class="calculator" id="calculator">
                     <div class="calculator__title">
                         Какая сумма Вам нужна?
                     </div>
@@ -76,14 +76,14 @@
                         <div class="slider__currency">грн</div>
                     </div>
                     <div id="calculator__slider" class="calculator__slider slider"></div>
-                    <input type="text" class="material-input" placeholder="Телефон">
-                    <input type="email" class="material-input" placeholder="E-mail">
-                    <input type="number" class="material-input" placeholder="ИНН">
-                    <input type="password" class="material-input" placeholder="Пароль">
-                    <input type="password" class="material-input" placeholder="Подтвердить пароль">
+                    <input type="text" class="material-input" placeholder="Телефон" name="tel" id="tel" data-error="#error-tel">
+                    <input type="email" class="material-input" placeholder="E-mail" name="email" id="email" data-error="#error-email">
+                    <input type="number" class="material-input" placeholder="ИНН" name="inn" id="inn" data-error="#error-inn">
+                    <input type="password" class="material-input" placeholder="Пароль" name="password" id="password" data-error="#error-password">
+                    <input type="password" class="material-input" placeholder="Подтвердить пароль" name="password-confirm" id="password-confirm" data-error="#error-password-confirm">
                     <div class="terms">
                         <label class="checkbox-styled">
-                            <input type="checkbox" id="terms" name="terms">
+                            <input type="checkbox" id="terms" name="terms" data-error="#error-terms">
                             Я ознакомлен(а) и принимаю <a href="#!">«Соглашение об обработке персональных
                             данных»</a>, а также согласен(на) с <a href="#!">«Положения про конфиденциальность
                             данных и их обработку», «Правила выдачи кредитных займов»</a>.
@@ -92,7 +92,7 @@
 
                     </div>
                     <button class="btn">Получить деньги</button>
-                </div>
+                </form>
             </div>
         </div>
     </div>
