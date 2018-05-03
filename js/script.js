@@ -128,7 +128,6 @@ $(function () {
             }
         },
         submitHandler: function (form) {
-            window.location = 'https://google.com';
         }
 
     });
@@ -162,7 +161,6 @@ $(function () {
             }
         },
         submitHandler: function (form) {
-            window.location = 'https://google.com';
         }
 
     });
