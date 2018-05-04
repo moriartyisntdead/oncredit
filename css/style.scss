@@ -18,10 +18,44 @@ body {
 .half-bg-main {
   padding: 32px 0;
   background: url(../img/blue-bg.png) 100% 0/45% auto repeat-y;
+}
+
+.half-bg-news {
+  padding: 32px 0;
+  background: url(../img/blue-bg.png) 100% 0/43% auto repeat-y;
+  @media (max-width: 1600px) {
+    background: url(../img/blue-bg.png) 100% 0/40% auto repeat-y;
+  }
+}
+
+.half-bg,
+.half-bg-news {
+  .footer__title {
+    margin-top: 34px;
+  }
+  @media (max-width: 991px) {
+    background: url(../img/blue-bg.png) 0 100%/355px auto repeat-x;
+  }
+  @media (max-width: 575px) {
+    background: url(../img/blue-bg.png) 0 100%/580px auto repeat-x;
+  }
+  @media (max-width: 518px) {
+    background: url(../img/blue-bg.png) 0 100%/636px auto repeat-x;
+  }
+}
+
+.half-bg {
+  .footer-wrapper {
+    margin-top: 110px;
+  }
+}
+
+.half-bg-main {
   @media (max-width: 991px) {
     background: $color-white-hover;
   }
 }
+
 
 a {
   color: $color-grey-dark;
@@ -819,9 +853,6 @@ input[type='number'] {
   font-size: 24px;
   font-family: RobotoCondensed-Regular;
   margin-bottom: 7px;
-  .side-slider & {
-
-  }
   @media(max-width: 575px) {
     font-size: 16px;
   }
@@ -886,6 +917,9 @@ input[type='number'] {
   font-family: RobotoCondensed-Regular;
   font-size: 24px;
   color: $color-blue;
+  @media (max-width: 991px) {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 991px) {
@@ -969,12 +1003,6 @@ input[type='number'] {
 /*            Блок с текстом           */
 /***************************************/
 
-/*.text-section {
-  &.half-bg {
-    padding: 55px 0 65px;
-  }
-}*/
-
 .text-section_title {
   font-size: 36px;
   color: $color-title;
@@ -1041,7 +1069,17 @@ input[type='number'] {
 /***************************************/
 
 .side-slider {
-  margin-bottom: 166px;
+  margin-bottom: 100px;
+  @media (max-width: 991px) {
+    margin-bottom: 0;
+    width: 50%;
+    .slider__labels {
+      font-size: 18px;
+    }
+  }
+  @media (max-width: 575px){
+    width: 100%;
+  }
 }
 
 .side-slider__title {
@@ -1050,10 +1088,14 @@ input[type='number'] {
   font-size: 34px; //36
   margin-bottom: 28px;
   line-height: 1;
+  @media (max-width: 991px) {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
 }
 
 .side-slider__btn {
-  margin-top: 52px;
+  margin-top: 30px;
 }
 
 /***************************************/
@@ -1183,14 +1225,6 @@ input[type='number'] {
 /***************************************/
 /*               Новости               */
 /***************************************/
-
-.half-bg-news {
-  padding: 32px 0;
-  background: url(../img/blue-bg.png) 100% 0/43% auto repeat-y;
-  @media (max-width: 1600px) {
-    background: url(../img/blue-bg.png) 100% 0/40% auto repeat-y;
-  }
-}
 
 .article {
   padding-bottom: 20px;

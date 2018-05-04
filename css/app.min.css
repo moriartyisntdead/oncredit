@@ -8175,10 +8175,39 @@ body.opened {
 .half-bg-main {
   padding: 32px 0;
   background: url(../img/blue-bg.png) 100% 0/45% auto repeat-y; }
-  @media (max-width: 991px) {
-    .half-bg,
-    .half-bg-main {
-      background: #f0fcff; } }
+
+.half-bg-news {
+  padding: 32px 0;
+  background: url(../img/blue-bg.png) 100% 0/43% auto repeat-y; }
+  @media (max-width: 1600px) {
+    .half-bg-news {
+      background: url(../img/blue-bg.png) 100% 0/40% auto repeat-y; } }
+
+.half-bg .footer__title,
+.half-bg-news .footer__title {
+  margin-top: 34px; }
+
+@media (max-width: 991px) {
+  .half-bg,
+  .half-bg-news {
+    background: url(../img/blue-bg.png) 0 100%/355px auto repeat-x; } }
+
+@media (max-width: 575px) {
+  .half-bg,
+  .half-bg-news {
+    background: url(../img/blue-bg.png) 0 100%/580px auto repeat-x; } }
+
+@media (max-width: 518px) {
+  .half-bg,
+  .half-bg-news {
+    background: url(../img/blue-bg.png) 0 100%/636px auto repeat-x; } }
+
+.half-bg .footer-wrapper {
+  margin-top: 110px; }
+
+@media (max-width: 991px) {
+  .half-bg-main {
+    background: #f0fcff; } }
 
 a {
   color: #999999;
@@ -8871,6 +8900,9 @@ input[type='number'] {
   font-family: RobotoCondensed-Regular;
   font-size: 24px;
   color: #069; }
+  @media (max-width: 991px) {
+    .slider__calc {
+      font-size: 18px; } }
 
 @media (max-width: 991px) {
   .calculator-block {
@@ -8923,11 +8955,6 @@ input[type='number'] {
 /***************************************/
 /*            Блок с текстом           */
 /***************************************/
-/*.text-section {
-  &.half-bg {
-    padding: 55px 0 65px;
-  }
-}*/
 .text-section_title {
   font-size: 36px;
   color: #333;
@@ -8977,7 +9004,16 @@ input[type='number'] {
 /*           Боковой слайдер           */
 /***************************************/
 .side-slider {
-  margin-bottom: 166px; }
+  margin-bottom: 100px; }
+  @media (max-width: 991px) {
+    .side-slider {
+      margin-bottom: 0;
+      width: 50%; }
+      .side-slider .slider__labels {
+        font-size: 18px; } }
+  @media (max-width: 575px) {
+    .side-slider {
+      width: 100%; } }
 
 .side-slider__title {
   color: #999999;
@@ -8985,9 +9021,13 @@ input[type='number'] {
   font-size: 34px;
   margin-bottom: 28px;
   line-height: 1; }
+  @media (max-width: 991px) {
+    .side-slider__title {
+      font-size: 24px;
+      margin-bottom: 10px; } }
 
 .side-slider__btn {
-  margin-top: 52px; }
+  margin-top: 30px; }
 
 /***************************************/
 /*                Футер                */
@@ -9080,13 +9120,6 @@ input[type='number'] {
 /***************************************/
 /*               Новости               */
 /***************************************/
-.half-bg-news {
-  padding: 32px 0;
-  background: url(../img/blue-bg.png) 100% 0/43% auto repeat-y; }
-  @media (max-width: 1600px) {
-    .half-bg-news {
-      background: url(../img/blue-bg.png) 100% 0/40% auto repeat-y; } }
-
 .article {
   padding-bottom: 20px; }
 
