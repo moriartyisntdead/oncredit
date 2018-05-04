@@ -74,8 +74,8 @@ $(function () {
     }
 
     $('.navbar-toggler').click(function () {
-        $('.navbar').toggleClass('opened');
-        $('body').toggleClass('opened');
+        // $('.navbar').toggleClass('opened');
+        // $('body').toggleClass('opened');
     });
 
     jQuery('#tel').mask('380000000000');
