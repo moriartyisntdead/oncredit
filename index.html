@@ -7,53 +7,53 @@
     <link rel="stylesheet" href="css/app.min.css">
 </head>
 <body>
-<!--header-->
-<header class="header">
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a href="/" class="navbar-brand">
-                <img src="img/logo.png" alt="logo">
-            </a>
+<!--main content-->
+<section class="calculator-block">
+    <!--header-->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a href="/" class="navbar-brand">
+                    <img src="img/logo.png" alt="logo">
+                </a>
 
-            <div class="navbar-mobile">
-                <div class="navbar-lang navbar-mobile__lang">
-                    <a href="#!" class="active">рус</a>
-                    /
-                    <a href="#!">укр</a>
-                </div>
-                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#header_menu"
-                        aria-controls="header_menu" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-
-            <div class="collapse navbar-collapse" id="header_menu">
-                <div class="navbar-nav mx-auto">
-                    <span class="line"></span>
-                    <a href="take.html" class="nav-link white">Как получить</a>
-                    <a href="payback.html" class="nav-link white">Как погасить</a>
-                    <a href="prolong.html" class="nav-link white">Как продлить</a>
-                    <a href="news.html" class="nav-link white">Новости</a>
-                    <a href="questions.html" class="nav-link white">Вопросы</a>
-                </div>
-                <div class="navbar-side">
-                    <div class="navbar-lang">
+                <div class="navbar-mobile">
+                    <div class="navbar-lang navbar-mobile__lang">
                         <a href="#!" class="active">рус</a>
                         /
                         <a href="#!">укр</a>
                     </div>
-                    <a href="login.html" class="btn-border white btn-enter">Вход</a>
+                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                            data-target="#header_menu"
+                            aria-controls="header_menu" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
                 </div>
+
+                <div class="collapse navbar-collapse" id="header_menu">
+                    <div class="navbar-nav mx-auto">
+                        <span class="line"></span>
+                        <a href="take.html" class="nav-link white">Как получить</a>
+                        <a href="payback.html" class="nav-link white">Как погасить</a>
+                        <a href="prolong.html" class="nav-link white">Как продлить</a>
+                        <a href="news.html" class="nav-link white">Новости</a>
+                        <a href="questions.html" class="nav-link white">Вопросы</a>
+                    </div>
+                    <div class="navbar-side">
+                        <div class="navbar-lang">
+                            <a href="#!" class="active">рус</a>
+                            /
+                            <a href="#!">укр</a>
+                        </div>
+                        <a href="login.html" class="btn-border white btn-enter">Вход</a>
+                    </div>
+                </div>
+
             </div>
-
-        </div>
-    </nav>
-</header>
-
-<!--main content-->
-<section class="calculator-block">
+        </nav>
+    </header>
     <div class="container">
         <div class="row">
             <div class="col-lg">
@@ -71,15 +71,20 @@
                         <div class="slider__currency">грн</div>
                     </div>
                     <div id="calculator__slider" class="calculator__slider slider"></div>
-                    <input type="text" class="material-input" placeholder="Телефон" name="tel" id="tel" data-error="#error-tel">
+                    <input type="text" class="material-input" placeholder="Телефон" name="tel" id="tel"
+                           data-error="#error-tel">
                     <div id="error-tel"></div>
-                    <input type="email" class="material-input" placeholder="E-mail" name="email" id="email" data-error="#error-email">
+                    <input type="email" class="material-input" placeholder="E-mail" name="email" id="email"
+                           data-error="#error-email">
                     <div id="error-email"></div>
-                    <input type="number" class="material-input" placeholder="ИНН" name="inn" id="inn" data-error="#error-inn">
+                    <input type="number" class="material-input" placeholder="ИНН" name="inn" id="inn"
+                           data-error="#error-inn">
                     <div id="error-inn"></div>
-                    <input type="password" class="material-input" placeholder="Пароль" name="password" id="password" data-error="#error-password">
+                    <input type="password" class="material-input" placeholder="Пароль" name="password" id="password"
+                           data-error="#error-password">
                     <div id="error-password"></div>
-                    <input type="password" class="material-input" placeholder="Подтвердить пароль" name="password_confirm" id="password_confirm" data-error="#error-password_confirm">
+                    <input type="password" class="material-input" placeholder="Подтвердить пароль"
+                           name="password_confirm" id="password_confirm" data-error="#error-password_confirm">
                     <div id="error-password_confirm"></div>
                     <div class="terms">
                         <label class="checkbox-styled">
