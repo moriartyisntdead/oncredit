@@ -76,7 +76,7 @@ $(function () {
     $('.navbar-toggler').click(function () {
         $('.navbar').toggleClass('opened');
         $('body').toggleClass('opened');
-    })
+    });
 
     jQuery('#tel').mask('380000000000');
     jQuery('#inn').mask('0000000000');
@@ -100,7 +100,6 @@ $(function () {
                 required: true,
                 equalTo: "#password"
             },
-
             inn: {
                 required: true,
                 minlength: 10,

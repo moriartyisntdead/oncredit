@@ -682,14 +682,38 @@ input[type='number'] {
 .banner {
   height: 494px;
   width: 100%;
-  background: url(../img/banner.png);
+  background: url(../img/banner.png) right no-repeat;
   background-size: cover;
   padding-top: 186px;
+  @media (max-width: 1788px) {
+    background-position-x: calc(100% + 132px);
+  }
+  @media (max-width: 1590px) {
+    padding-top: 200px;
+  }
+  @media (max-width: 1199px) {
+    padding-top: 232px;
+
+  }
+  @media (max-width: 991px) {
+    height: 440px;
+    background: url(../img/banner-tablets.png) right no-repeat;
+    background-size: cover;
+  }
+  @media (max-width: 959px) {
+    background-position-x: calc(100% + 32px);
+  }
+  @media (max-width: 575px) {
+    height: 480px;
+    padding-top: 306px;
+    background: url(../img/banner_phone.png) right no-repeat;
+    background-size: cover;
+  }
 }
 
 .banner__breadcrumbs {
-  font-size: 12px;
-  margin-bottom: 20px;
+  font-size: 14px;
+  margin-bottom: 12px;
   display: block;
   font-family: RobotoCondensed-Regular;
 }
@@ -713,8 +737,31 @@ input[type='number'] {
   color: $color-white;
   font-family: RobotoCondensed-Bold;
   line-height: 1.1;
-  max-width: 820px;
-  display: none;
+  //max-width: 820px;
+}
+
+@media (max-width: 1590px) {
+  .banner__title {
+    font-size: 72px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .banner__title {
+    font-size: 66px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .banner__title {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 575px) {
+  .banner__title {
+    font-size: 30px;
+  }
 }
 
 /***************************************/
@@ -788,7 +835,7 @@ input[type='number'] {
 }
 
 .calculator__title {
-  font-size: 36px;
+  font-size: 34px;
   color: $color-blue;
   font-family: RobotoCondensed-Regular;
   margin-bottom: 20px;
@@ -981,7 +1028,7 @@ input[type='number'] {
 .side-slider__title {
   color: $color-grey-dark;
   font-family: RobotoCondensed-Light;
-  font-size: 36px;
+  font-size: 34px; //36
   margin-bottom: 28px;
   line-height: 1;
 }
@@ -1065,6 +1112,11 @@ input[type='number'] {
   img {
     margin: 0 7px;
   }
+  @media (max-width: 575px) {
+    img {
+      margin: 0 6px;
+    }
+  }
 }
 
 .comodo {
@@ -1109,19 +1161,12 @@ input[type='number'] {
   }
 }
 
-@media (max-width: 575px) {
-  .partners {
-    img {
-      margin: 0 6px;
-    }
-  }
-}
-
 /***************************************/
 /*               Новости               */
 /***************************************/
 
 .half-bg-news {
+  padding: 32px 0;
   background: url(../img/blue-bg.png) 100% 0/43% auto repeat-y;
   @media (max-width: 1600px) {
     background: url(../img/blue-bg.png) 100% 0/40% auto repeat-y;
@@ -1409,7 +1454,7 @@ input[type='number'] {
   height: 26px;
   text-align: center;
   line-height: 26px;
-  margin-bottom: 5px;
+  //margin-bottom: 5px;
   @media (max-width: 575px) {
     font-size: 10px;
     height: 12px;
