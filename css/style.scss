@@ -711,17 +711,28 @@ input[type='number'] {
   }
   @media (max-width: 991px) {
     height: 440px;
-    background: url(../img/banner-tablets.png) right no-repeat;
+    background: $color-blue url(../img/banner-tablets.png) top right no-repeat;
     background-size: cover;
   }
   @media (max-width: 959px) {
     background-position-x: calc(100% + 32px);
   }
+
+  @media (max-width: 767px) {
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 480px;
+    background-size: inherit;
+    .container {
+      margin-bottom: 70px;
+      margin-top: auto;
+    }
+  }
+
   @media (max-width: 575px) {
-    height: 480px;
-    padding-top: 306px;
-    background: url(../img/banner_phone.png) right no-repeat;
-    background-size: cover;
+    background: $color-blue url(../img/banner_phone.png) top right no-repeat;
   }
 }
 
