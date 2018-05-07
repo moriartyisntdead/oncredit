@@ -8,12 +8,6 @@
 /***************************************/
 /*             Общие стили             */
 /***************************************/
-body {
-  &.opened {
-    overflow-y: hidden;
-  }
-}
-
 .half-bg,
 .half-bg-main {
   padding: 32px 0;
@@ -55,7 +49,6 @@ body {
     background: $color-white-hover;
   }
 }
-
 
 a {
   color: $color-grey-dark;
@@ -405,7 +398,6 @@ input[type='number'] {
   font-family: RobotoCondensed-Regular;
   font-size: 18px;
   line-height: 22px;
-  //color: $color-info-description;
   color: $color-grey-dark;
 }
 
@@ -446,7 +438,6 @@ input[type='number'] {
 .info-title {
   font-size: 24px;
   line-height: 30px;
-  //color: $color-info-title;
   color: $color-blue;
   text-transform: uppercase;
   @media (max-width: 991px) {
@@ -469,7 +460,6 @@ input[type='number'] {
 .info-description {
   font-size: 18px;
   line-height: 22px;
-  //color: $color-info-description;
   color: $color-grey-dark;
   padding-top: 15px;
   @media (max-width: 575px) {
@@ -480,7 +470,6 @@ input[type='number'] {
 }
 
 .info-highlight {
-  //color: $color-info-title;
   color: $color-blue;
 }
 
@@ -570,14 +559,6 @@ input[type='number'] {
     flex-grow: 1;
     padding-top: 18px;
     padding-bottom: 0;
-    &.opened {
-      @media (max-width: 767px) {
-        background: rgba(19, 72, 84, 0.85);
-        position: fixed;
-        height: 100vh;
-        overflow-y: auto;
-      }
-    }
     @media(max-width: 991px) {
       padding-top: 35px;
     }
@@ -587,6 +568,9 @@ input[type='number'] {
       right: 0;
       z-index: 9;
       padding-bottom: 10px;
+    }
+    @media (max-width: 575px) {
+      padding-bottom: 20px;
     }
   }
   .nav-link {
@@ -634,7 +618,6 @@ input[type='number'] {
     margin-right: 26px;
     flex-direction: row;
     justify-content: flex-end;
-    //width: 100%;
     @media (max-width: 767px) {
       margin-right: 25px;
     }
@@ -745,28 +728,26 @@ input[type='number'] {
   }
   @media (max-width: 991px) {
     height: 440px;
-    background: $color-blue url(../img/banner-tablets.png) top right no-repeat;
-    background-size: cover;
+    background: url(../img/banner-tablets.png) no-repeat top right, linear-gradient(to right, #66a4c4, #66e0fe);
   }
   @media (max-width: 959px) {
-    background-position-x: calc(100% + 32px);
+    background-position-x: calc(100% + 32px), 0;
   }
 
   @media (max-width: 767px) {
     padding-top: 0;
     display: flex;
     flex-direction: column;
-    height: auto;
-    min-height: 480px;
+    min-height: 470px;
     background-size: inherit;
     .container {
-      margin-bottom: 70px;
+      margin-bottom: 80px;
       margin-top: auto;
     }
   }
 
   @media (max-width: 575px) {
-    background: $color-blue url(../img/banner_phone.png) top right no-repeat;
+    background: url(../img/banner_phone.png) no-repeat top right, linear-gradient(to right, #66a4c4, #66e0fe);
   }
 }
 
@@ -775,6 +756,11 @@ input[type='number'] {
   margin-bottom: 12px;
   display: block;
   font-family: RobotoCondensed-Regular;
+  @media (max-width: 767px) {
+    &.opened {
+      display: none;
+    }
+  }
 }
 
 .banner__breadcrumbs-first {
@@ -797,6 +783,11 @@ input[type='number'] {
   font-family: RobotoCondensed-Bold;
   line-height: 1.1;
   //max-width: 820px;
+  @media (max-width: 767px) {
+    &.opened {
+      display: none;
+    }
+  }
 }
 
 @media (max-width: 1590px) {
@@ -1088,7 +1079,7 @@ input[type='number'] {
       font-size: 18px;
     }
   }
-  @media (max-width: 575px){
+  @media (max-width: 575px) {
     width: 100%;
   }
 }
@@ -1236,6 +1227,12 @@ input[type='number'] {
 /***************************************/
 /*               Новости               */
 /***************************************/
+.articlesList {
+  @media (max-width: 575px) {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
 
 .article {
   padding-bottom: 20px;
@@ -1245,6 +1242,12 @@ input[type='number'] {
   padding-top: 78px;
   @media (max-width: 575px) {
     padding-top: 0;
+  }
+}
+
+.article-last {
+  @media (max-width: 991px) {
+    padding-bottom: 80px;
   }
 }
 
@@ -1265,6 +1268,13 @@ input[type='number'] {
     position: absolute;
     top: -10px;
     left: 0;
+  }
+
+  @media (max-width: 575px) {
+    width: 230px;
+    margin-left: auto;
+    margin-right: auto;
+
   }
 }
 
@@ -1435,6 +1445,9 @@ input[type='number'] {
 
 .info-block__title--take-page {
   margin-bottom: 60px;
+  @media (max-width: 991px) {
+    margin-bottom: 25px;
+  }
 }
 
 .info-item--take-page {

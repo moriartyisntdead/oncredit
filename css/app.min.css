@@ -8168,9 +8168,6 @@ body .ui-tooltip {
 /***************************************/
 /*             Общие стили             */
 /***************************************/
-body.opened {
-  overflow-y: hidden; }
-
 .half-bg,
 .half-bg-main {
   padding: 32px 0;
@@ -8465,6 +8462,16 @@ input[type='number'] {
       height: 6px;
       border-width: 0 1px 1px 0; } }
 
+@media (max-width: 991px) {
+  .info-block {
+    padding-left: 95px;
+    padding-right: 95px; } }
+
+@media (max-width: 767px) {
+  .info-block {
+    padding-left: 0;
+    padding-right: 0; } }
+
 .info-block__title {
   font-family: RobotoCondensed-Light;
   font-size: 30px;
@@ -8519,7 +8526,7 @@ input[type='number'] {
     .info-title {
       font-size: 18px;
       line-height: 20px; } }
-  @media (max-width: 767px) {
+  @media (max-width: 575px) {
     .info-title {
       font-size: 14px;
       line-height: 16px; } }
@@ -8601,6 +8608,9 @@ input[type='number'] {
   left: 0;
   right: 0;
   z-index: 999; }
+  @media (max-width: 767px) {
+    .header {
+      position: relative; } }
   .header .navbar-brand img {
     width: 164px;
     height: 27px; }
@@ -8614,12 +8624,6 @@ input[type='number'] {
     flex-grow: 1;
     padding-top: 18px;
     padding-bottom: 0; }
-    @media (max-width: 767px) {
-      .header .navbar.opened {
-        background: url(../img/bg-main.png) 50% 0%;
-        position: fixed;
-        height: 100vh;
-        overflow-y: auto; } }
     @media (max-width: 991px) {
       .header .navbar {
         padding-top: 35px; } }
@@ -8630,6 +8634,9 @@ input[type='number'] {
         right: 0;
         z-index: 9;
         padding-bottom: 10px; } }
+    @media (max-width: 575px) {
+      .header .navbar {
+        padding-bottom: 20px; } }
   .header .nav-link {
     font-family: RobotoCondensed-Italic;
     font-size: 18px;
@@ -8659,7 +8666,8 @@ input[type='number'] {
       .header .navbar-side {
         float: none;
         justify-content: center;
-        margin-top: 25px; } }
+        margin-top: 25px;
+        margin-bottom: 40px; } }
   .header .navbar-lang {
     color: #fff;
     font-family: RobotoCondensed-Italic;
@@ -8761,23 +8769,32 @@ input[type='number'] {
   @media (max-width: 991px) {
     .banner {
       height: 440px;
-      background: url(../img/banner-tablets.png) right no-repeat;
-      background-size: cover; } }
+      background: url(../img/banner-tablets.png) no-repeat top right, linear-gradient(to right, #66a4c4, #66e0fe); } }
   @media (max-width: 959px) {
     .banner {
-      background-position-x: calc(100% + 32px); } }
+      background-position-x: calc(100% + 32px), 0; } }
+  @media (max-width: 767px) {
+    .banner {
+      padding-top: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 470px;
+      background-size: inherit; }
+      .banner .container {
+        margin-bottom: 80px;
+        margin-top: auto; } }
   @media (max-width: 575px) {
     .banner {
-      height: 480px;
-      padding-top: 306px;
-      background: url(../img/banner_phone.png) right no-repeat;
-      background-size: cover; } }
+      background: url(../img/banner_phone.png) no-repeat top right, linear-gradient(to right, #66a4c4, #66e0fe); } }
 
 .banner__breadcrumbs {
   font-size: 14px;
   margin-bottom: 12px;
   display: block;
   font-family: RobotoCondensed-Regular; }
+  @media (max-width: 767px) {
+    .banner__breadcrumbs.opened {
+      display: none; } }
 
 .banner__breadcrumbs-first {
   color: #999999; }
@@ -8795,6 +8812,9 @@ input[type='number'] {
   color: #fff;
   font-family: RobotoCondensed-Bold;
   line-height: 1.1; }
+  @media (max-width: 767px) {
+    .banner__title.opened {
+      display: none; } }
 
 @media (max-width: 1590px) {
   .banner__title {
@@ -8929,6 +8949,10 @@ input[type='number'] {
     font-size: 30px; } }
 
 @media (max-width: 767px) {
+  .calculator-block {
+    height: auto;
+    padding-top: 0;
+    padding-bottom: 20px; }
   .calculator-block__title:after {
     left: -62px; } }
 
@@ -8941,9 +8965,6 @@ input[type='number'] {
       padding: 5px 0 0; }
     .calculator .btn {
       font-size: 16px; }
-  .calculator-block {
-    height: 700px;
-    background-position-y: 94%; }
   .calculator__title {
     font-size: 20px;
     margin-bottom: 7px; }
@@ -9120,6 +9141,11 @@ input[type='number'] {
 /***************************************/
 /*               Новости               */
 /***************************************/
+@media (max-width: 575px) {
+  .articlesList {
+    padding-left: 25px;
+    padding-right: 25px; } }
+
 .article {
   padding-bottom: 20px; }
 
@@ -9128,6 +9154,10 @@ input[type='number'] {
   @media (max-width: 575px) {
     .article_new-line {
       padding-top: 0; } }
+
+@media (max-width: 991px) {
+  .article-last {
+    padding-bottom: 80px; } }
 
 .article__miniature {
   position: relative;
@@ -9144,6 +9174,11 @@ input[type='number'] {
     position: absolute;
     top: -10px;
     left: 0; }
+  @media (max-width: 575px) {
+    .article__miniature {
+      width: 230px;
+      margin-left: auto;
+      margin-right: auto; } }
 
 .article__title {
   min-height: 84px;
@@ -9279,6 +9314,9 @@ input[type='number'] {
 /***************************************/
 .info-block__title--take-page {
   margin-bottom: 60px; }
+  @media (max-width: 991px) {
+    .info-block__title--take-page {
+      margin-bottom: 25px; } }
 
 .info-item--take-page {
   margin-bottom: 50px; }
@@ -9341,9 +9379,10 @@ input[type='number'] {
   color: #cc0000;
   font-size: 14px;
   width: 100%;
-  height: 26px;
+  height: 20px;
   text-align: center;
-  line-height: 26px; }
+  line-height: 20px;
+  margin-bottom: 0; }
   @media (max-width: 575px) {
     #error-tel,
     #error-email,
