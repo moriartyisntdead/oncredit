@@ -714,7 +714,7 @@ input[type='number'] {
 /*           Баннер страницы           */
 /***************************************/
 
-.banner {
+.girl {
   height: 494px;
   width: 100%;
   background: url(../img/banner.png) right no-repeat;
@@ -755,7 +755,7 @@ input[type='number'] {
   }
 }
 
-.banner__breadcrumbs {
+.girl__breadcrumbs {
   font-size: 14px;
   margin-bottom: 12px;
   display: block;
@@ -767,7 +767,7 @@ input[type='number'] {
   }
 }
 
-.banner__breadcrumbs-first {
+.girl__breadcrumbs-first {
   color: $color-grey-dark;
   &:after {
     content: ' - ';
@@ -776,11 +776,11 @@ input[type='number'] {
   }
 }
 
-.banner__breadcrumbs-second {
+.girl__breadcrumbs-second {
   color: $color-white;
 }
 
-.banner__title {
+.girl__title {
   font-size: 90px;
   text-transform: uppercase;
   color: $color-white;
