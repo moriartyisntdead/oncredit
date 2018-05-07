@@ -73,3 +73,21 @@ gulp.task('dev:style:build', function () {
 gulp.task('dev', ['dev:js:build', 'dev:style:build'], function () {
     console.log('Success!');
 });
+
+gulp.task('new:style:build', function () {
+    gulp.src(
+        'css/bootstrap.min.css',
+        'css/jquery-ui.min.css',
+        'css/newStyles.scss')
+        .pipe(sass().on('error', sass.logError)) // Компилирует SCSS
+        .pipe(concat('app.min.css')) // Объединяет всё в один файл
+        .pipe(postcss([
+            require('autoprefixer')(),
+            require('cssnano')()
+        ]))
+        .pipe(gulp.dest('css'))
+});
+
+gulp.task('new', ['new:style:build'], function () {
+    console.log('Success!');
+});

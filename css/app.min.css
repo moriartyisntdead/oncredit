@@ -8199,9 +8199,6 @@ body .ui-tooltip {
   .half-bg-news {
     background: url(../img/blue-bg.png) 0 100%/636px auto repeat-x; } }
 
-.half-bg .footer-wrapper {
-  margin-top: 110px; }
-
 @media (max-width: 991px) {
   .half-bg-main {
     background: #f0fcff; } }
@@ -8813,25 +8810,21 @@ input[type='number'] {
   color: #fff;
   font-family: RobotoCondensed-Bold;
   line-height: 1.1; }
+  @media (max-width: 1590px) {
+    .banner__title {
+      font-size: 72px; } }
+  @media (max-width: 1300px) {
+    .banner__title {
+      font-size: 66px; } }
+  @media (max-width: 1199px) {
+    .banner__title {
+      font-size: 48px; } }
   @media (max-width: 767px) {
     .banner__title.opened {
       display: none; } }
-
-@media (max-width: 1590px) {
-  .banner__title {
-    font-size: 72px; } }
-
-@media (max-width: 1300px) {
-  .banner__title {
-    font-size: 66px; } }
-
-@media (max-width: 1199px) {
-  .banner__title {
-    font-size: 48px; } }
-
-@media (max-width: 575px) {
-  .banner__title {
-    font-size: 30px; } }
+  @media (max-width: 575px) {
+    .banner__title {
+      font-size: 30px; } }
 
 /***************************************/
 /*             Калькулятор             */
@@ -8846,6 +8839,17 @@ input[type='number'] {
     display: block;
     position: absolute;
     bottom: 100px; }
+  @media (max-width: 991px) {
+    .calculator-block {
+      background: url(../img/bg-main-tablets.png) no-repeat; } }
+  @media (max-width: 767px) {
+    .calculator-block {
+      height: 950px;
+      padding-top: 100px;
+      padding-bottom: 20px; } }
+  @media (max-width: 575px) {
+    .calculator-block {
+      height: 700px; } }
 
 .calculator-block__title {
   font-size: 44px;
@@ -8866,6 +8870,24 @@ input[type='number'] {
     background: url(../img/arrow.png);
     right: 18px;
     top: 75px; }
+  @media (max-width: 991px) {
+    .calculator-block__title {
+      position: relative;
+      max-width: 450px;
+      margin: 12px auto 22px; }
+      .calculator-block__title:after {
+        top: 86px;
+        right: auto;
+        transform: scale(-1, 1);
+        left: -84px; } }
+  @media (max-width: 767px) {
+    .calculator-block__title:after {
+      left: -62px; }
+    .calculator-block__title.opened {
+      opacity: 0; } }
+  @media (max-width: 575px) {
+    .calculator-block__title {
+      display: none; } }
 
 .slider__labels {
   font-size: 24px;
@@ -8892,12 +8914,41 @@ input[type='number'] {
     font-size: 24px; }
   .calculator .btn {
     font-size: 24px; }
+  @media (max-width: 991px) {
+    .calculator {
+      width: 450px;
+      margin: 0 auto;
+      padding: 36px 60px 60px; }
+      .calculator .material-input {
+        font-size: 18px;
+        padding: 7px 0; }
+      .calculator .btn {
+        font-size: 18px; } }
+  @media (max-width: 767px) {
+    .calculator.opened {
+      opacity: 0; } }
+  @media (max-width: 575px) {
+    .calculator {
+      max-width: 100%;
+      padding: 24px 38px 38px; }
+      .calculator .material-input {
+        font-size: 16px;
+        padding: 5px 0 0; }
+      .calculator .btn {
+        font-size: 16px; } }
 
 .calculator__title {
   font-size: 34px;
   color: #069;
   font-family: RobotoCondensed-Regular;
   margin-bottom: 20px; }
+  @media (max-width: 991px) {
+    .calculator__title {
+      font-size: 30px; } }
+  @media (max-width: 575px) {
+    .calculator__title {
+      font-size: 20px;
+      margin-bottom: 7px; } }
 
 .terms {
   display: flex;
@@ -8915,6 +8966,9 @@ input[type='number'] {
   @media (max-width: 991px) {
     .terms {
       font-size: 13px; } }
+  @media (max-width: 575px) {
+    .terms {
+      font-size: 12px; } }
 
 .slider__text {
   font-family: RobotoCondensed-Light;
@@ -8928,61 +8982,6 @@ input[type='number'] {
   @media (max-width: 991px) {
     .slider__calc {
       font-size: 18px; } }
-
-@media (max-width: 991px) {
-  .calculator-block {
-    background: url(../img/bg-main-tablets.png) no-repeat; }
-  .calculator-block__title {
-    position: relative;
-    max-width: 450px;
-    margin: 12px auto 22px; }
-    .calculator-block__title:after {
-      top: 86px;
-      right: auto;
-      transform: scale(-1, 1);
-      left: -84px; }
-  .calculator {
-    width: 450px;
-    margin: 0 auto;
-    padding: 36px 60px 60px; }
-    .calculator .material-input {
-      font-size: 18px;
-      padding: 7px 0; }
-    .calculator .btn {
-      font-size: 18px; }
-  .calculator__title {
-    font-size: 30px; } }
-
-@media (max-width: 767px) {
-  .calculator.opened {
-    opacity: 0; }
-  .calculator-block {
-    height: 950px;
-    padding-top: 100px;
-    padding-bottom: 20px; }
-  .calculator-block__title:after {
-    left: -62px; }
-  .calculator-block__title.opened {
-    opacity: 0; } }
-
-@media (max-width: 575px) {
-  .calculator {
-    max-width: 100%;
-    padding: 24px 38px 38px; }
-    .calculator .material-input {
-      font-size: 16px;
-      padding: 5px 0 0; }
-    .calculator .btn {
-      font-size: 16px; }
-  .calculator-block {
-    height: 700px; }
-  .calculator__title {
-    font-size: 20px;
-    margin-bottom: 7px; }
-  .calculator-block__title {
-    display: none; }
-  .terms {
-    font-size: 12px; } }
 
 /***************************************/
 /*            Блок с текстом           */
@@ -9012,6 +9011,14 @@ input[type='number'] {
   font-family: RobotoCondensed-Regular;
   font-size: 18px;
   margin-bottom: 60px; }
+  @media (max-width: 991px) {
+    .requisites-block {
+      font-size: 14px;
+      margin-bottom: 0; } }
+  @media (max-width: 575px) {
+    .requisites-block {
+      font-size: 14px;
+      margin-bottom: 28px; } }
 
 .requisites-block__title {
   margin-bottom: 10px; }
@@ -9021,16 +9028,6 @@ input[type='number'] {
   .requisites-block_additional-data:hover, .requisites-block_additional-data:active {
     color: #00669c;
     text-decoration: underline; }
-
-@media (max-width: 991px) {
-  .requisites-block {
-    font-size: 14px;
-    margin-bottom: 0; } }
-
-@media (max-width: 575px) {
-  .requisites-block {
-    font-size: 14px;
-    margin-bottom: 28px; } }
 
 /***************************************/
 /*           Боковой слайдер           */
@@ -9073,12 +9070,28 @@ input[type='number'] {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around; }
+  @media (max-width: 991px) {
+    .footer {
+      font-size: 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start; } }
+  @media (max-width: 575px) {
+    .footer {
+      width: 100%; }
+      .footer .partners {
+        margin: 12px 0; }
+      .footer .btn {
+        max-width: 93%; } }
 
 .footer__title {
   margin-bottom: 10px; }
 
 .footer__data {
   font-size: 18px; }
+  @media (max-width: 991px) {
+    .footer__data {
+      font-size: 14px; } }
 
 @media (max-width: 991px) {
   .footer-wrapper {
@@ -9089,22 +9102,7 @@ input[type='number'] {
     .footer-wrapper .btn {
       font-size: 14px;
       padding: 10px;
-      margin-bottom: 0; }
-  .footer {
-    font-size: 14px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; }
-  .footer__data {
-    font-size: 14px; } }
-
-@media (max-width: 575px) {
-  .footer {
-    width: 100%; }
-    .footer .partners {
-      margin: 12px 0; }
-    .footer .btn {
-      max-width: 93%; } }
+      margin-bottom: 0; } }
 
 /***************************************/
 /*               Партнеры              */
@@ -9117,37 +9115,41 @@ input[type='number'] {
   margin-top: 8px;
   justify-content: space-between; }
   .partners img {
-    margin: 0 7px; }
+    margin: 0 7px;
+    height: 50px; }
   @media (max-width: 575px) {
     .partners img {
       margin: 0 6px; } }
 
 .comodo {
   max-width: 119px; }
+  @media (max-width: 991px) {
+    .comodo {
+      max-width: 102px; } }
 
 .dss {
   max-width: 94px; }
+  @media (max-width: 991px) {
+    .dss {
+      max-width: 80px; } }
 
 .visa {
   max-width: 83px; }
+  @media (max-width: 991px) {
+    .visa {
+      max-width: 70px; } }
 
 .master-card {
   max-width: 97px; }
+  @media (max-width: 991px) {
+    .master-card {
+      max-width: 81px; } }
 
 .platon {
   max-width: 110px; }
-
-@media (max-width: 991px) {
-  .comodo {
-    max-width: 102px; }
-  .dss {
-    max-width: 80px; }
-  .visa {
-    max-width: 70px; }
-  .master-card {
-    max-width: 81px; }
-  .platon {
-    max-width: 96px; } }
+  @media (max-width: 991px) {
+    .platon {
+      max-width: 96px; } }
 
 /***************************************/
 /*               Новости               */
