@@ -568,9 +568,12 @@ input[type='number'] {
       right: 0;
       z-index: 9;
       padding-bottom: 10px;
+      position: absolute;
+
     }
     @media (max-width: 575px) {
       padding-bottom: 20px;
+
     }
   }
   .nav-link {
@@ -839,6 +842,8 @@ input[type='number'] {
   right: 0;
   top: 0;
   line-height: 1.1;
+  opacity: 1;
+  transition: all 0.5s;
   &:after {
     content: '';
     width: 69px;
@@ -873,6 +878,8 @@ input[type='number'] {
   border-radius: 9px;
   padding: 48px 46px 68px;
   background-color: $color-white;
+  opacity: 1;
+  transition: all 0.5s;
   .material-input {
     font-size: 24px;
   }
@@ -957,14 +964,22 @@ input[type='number'] {
 }
 
 @media (max-width: 767px) {
+  .calculator {
+    &.opened {
+      opacity: 0;
+    }
+  }
   .calculator-block {
-    height: auto;
-    padding-top: 0;
+    height: 950px;
+    padding-top: 100px;
     padding-bottom: 20px;
   }
   .calculator-block__title {
     &:after {
       left: -62px;
+    }
+    &.opened {
+      opacity: 0;
     }
   }
 }
@@ -983,7 +998,7 @@ input[type='number'] {
   }
 
   .calculator-block {
-    //height: 700px;
+    height: 700px;
     //background-position-y: 94%;
   }
 
