@@ -75,10 +75,11 @@ gulp.task('dev', ['dev:js:build', 'dev:style:build'], function () {
 });
 
 gulp.task('new:style:build', function () {
-    gulp.src(
+    gulp.src([
         'css/bootstrap.min.css',
         'css/jquery-ui.min.css',
-        'css/newStyles.scss')
+        'css/newStyle.scss'
+    ])
         .pipe(sass().on('error', sass.logError)) // Компилирует SCSS
         .pipe(concat('app.min.css')) // Объединяет всё в один файл
         .pipe(postcss([
