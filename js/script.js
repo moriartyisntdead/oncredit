@@ -74,8 +74,8 @@ $(function () {
     }
 
     $('.navbar-toggler').click(function () {
-        $('.banner__breadcrumbs').toggleClass('opened');
-        $('.banner__title').toggleClass('opened');
+        $('.girl__breadcrumbs').toggleClass('opened');
+        $('.girl__title').toggleClass('opened');
         $('.calculator').toggleClass('opened');
         $('.calculator-block__title').toggleClass('opened');
     });
