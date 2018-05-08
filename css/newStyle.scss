@@ -732,7 +732,7 @@ input[type='number'] {
   }
   @media (max-width: 991px) {
     height: 440px;
-    background: url(../img/banner-tablets.png) no-repeat top right, linear-gradient(to right, #66a4c4, #66e0fe);
+    background: url(../img/banner-tablets.png) no-repeat top right;
   }
   @media (max-width: 959px) {
     background-position-x: calc(100% + 32px), 0;
@@ -778,6 +778,7 @@ input[type='number'] {
 
 .girl__breadcrumbs-second {
   color: $color-white;
+  pointer-events: none;
 }
 
 .girl__title {
@@ -1374,6 +1375,9 @@ input[type='number'] {
   }
   .registration-step:nth-of-type(3) {
     background: url(../img/card.png) no-repeat;
+  }
+  @media (max-width: 991px){
+    display: none;
   }
 }
 
