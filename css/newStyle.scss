@@ -582,7 +582,7 @@ input[type='number'] {
     font-size: 18px;
     padding: 0;
     transition: all 0.25s;
-    &.active{
+    &.active {
       text-decoration: underline;
     }
     &:hover {
@@ -763,7 +763,7 @@ input[type='number'] {
   margin-bottom: 12px;
   display: block;
   font-family: RobotoCondensed-Regular;
-  li{
+  li {
     display: inline;
   }
   @media (max-width: 767px) {
@@ -1208,6 +1208,7 @@ input[type='number'] {
 /***************************************/
 /*               Новости               */
 /***************************************/
+
 .articlesList {
   @media (max-width: 575px) {
     padding-left: 25px;
@@ -1299,6 +1300,48 @@ input[type='number'] {
 }
 
 /***************************************/
+/*           Открытая новость          */
+/***************************************/
+
+.opened-article{
+  font-family: RobotoCondensed-Light;
+  font-size: 18px;
+}
+
+.opened-article__title {
+  font-size: 30px;
+  color: $color-title;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+}
+
+.opened-article__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.opened-article__img{
+  width: 100%;
+  max-height: 650px;
+}
+
+.opened-article__date{
+  font-size: 18px;
+  padding: 15px 0 20px;
+}
+
+.opened-article__intro{
+  color: $color-blue;
+  margin-bottom: 10px;
+}
+
+.opened-article-text{
+
+}
+
+/***************************************/
 /*               Вопросы               */
 /***************************************/
 
@@ -1382,7 +1425,7 @@ input[type='number'] {
   .registration-step:nth-of-type(3) {
     background: url(../img/card.png) no-repeat;
   }
-  @media (max-width: 991px){
+  @media (max-width: 991px) {
     display: none;
   }
 }
