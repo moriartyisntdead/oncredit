@@ -13,7 +13,6 @@ var scriptsSrc = [
     'js/jquery-3.3.1.min.js',
     'js/jquery-ui.min.js',
     'js/jquery.ui.touch-punch.min.js',
-    'js/lib/angular.min.js',
     'js/bootstrap.min.js',
     'js/moment.min.js',
     'js/jquery.mask.min.js',
